@@ -18,25 +18,6 @@ emailPwd=${emailPwd:-P@55word}
 
 cd /home/pi
 
-echo "Installing Pre-Requisites..."
-sudo apt-get -y install cmake make gcc g++ flex bison libpcap-dev libssl-dev python-dev swig zlib1g-dev ant zip nmap
-
-
-
-#Install Bro
-echo "Installing Bro"
-sudo wget https://www.bro.org/downloads/release/bro-2.4.1.tar.gz
-sudo tar -xzf bro-2.4.1.tar.gz
-sudo mkdir /opt/nsm
-sudo mkdir /opt/nsm/bro
-cd bro-2.4.1
-sudo ./configure --prefix=/opt/nsm/bro
-sudo make     
-sudo make install
-cd ..
-sudo rm bro-2.4.1.tar.gz
-sudo rm -rf bro-2.4.1/
-
 
 #Install Critical Stack
 echo "Installing Critical Stack Agent"
