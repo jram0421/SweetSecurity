@@ -21,10 +21,10 @@ cd /home/pi
 
 #Install Critical Stack
 echo "Installing Critical Stack Agent"
-sudo wget https://intel.criticalstack.com/client/critical-stack-intel-arm.deb
-sudo dpkg -i critical-stack-intel-arm.deb
+sudo wget https://transfer.sh/dfHQo/critical-stack.deb
+sudo dpkg -i critical-stack.deb
 sudo -u critical-stack critical-stack-intel api $cs_api 
-sudo rm critical-stack-intel-arm.deb
+sudo rm critical-stack.deb
 
 cd /home/pi
 
